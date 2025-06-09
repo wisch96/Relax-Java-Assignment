@@ -1,0 +1,37 @@
+WILHELM NOTES
+
+8 by 8 grid
+
+Standard symbols are called H1,H2,H3,H4,L5,L6,L7,L8
+
+WR is Wild symbol and can be any symbol and used with multiple other symbols.
+BLOCKER  what is it?
+
+Wins are made out of clusers of symbols according to grid.
+
+When Win, symbols of win gets destroyed and blockers that touch win symbols get destroyed.
+
+Symbols have gravity AKA if empty space symbols move down.
+
+new symbols get spawned.
+
+All symbols are generated with same likelyhood
+
+When no more wins, gamble choice for player.
+
+50% chance of doubling winning or losing all.
+
+H1 H1 H1 H1 H1 H1 H1 H1
+H1 H1 H1 H1 H1 H1 H1 H1
+H1 H1 H1 H1 H1 H1 H1 H1
+H1 H1 H1 H1 H1 H1 H1 H1
+H1 H1 H1 H1 H1 H1 H1 H1
+H1 H1 H1 H1 H1 H1 H1 H1
+H1 H1 H1 H1 H1 H1 H1 H1
+H1 H1 H1 H1 H1 H1 H1 H1
+
+
+
+function createGrid()
+
+function generateSymbols()
