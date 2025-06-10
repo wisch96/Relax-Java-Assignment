@@ -76,7 +76,8 @@ public class account {
 
     // Wilhelm comment: { symbol on separate line. Have it on the same line as
     // method declaration to be consistent with the other methods in class.
-    public Transaction makeTransactionFromDbRow(DbRow row) {
+    public Transaction makeTransactionFromDbRow(DbRow row) 
+    {
         double currencyAmountInPounds = Double.parseDouble(row.getValueForField("amt"));
         // Wilhelm comment: Avoid magic number: 1.10. Declare the number to a constant
         // alternatively change it dynamically using an API to get current transaction
