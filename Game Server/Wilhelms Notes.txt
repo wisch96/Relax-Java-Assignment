@@ -29,9 +29,3 @@ H1 H1 H1 H1 H1 H1 H1 H1
 H1 H1 H1 H1 H1 H1 H1 H1
 H1 H1 H1 H1 H1 H1 H1 H1
 H1 H1 H1 H1 H1 H1 H1 H1
-
-
-
-function createGrid()
-
-function generateSymbols()

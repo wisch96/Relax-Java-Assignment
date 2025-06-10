@@ -99,7 +99,6 @@ public class GameServer {
 
     public boolean findClusters() {
         boolean[][] globalVisited = new boolean[GRID_ROWS][GRID_COLS];
-        int clusterId = 1;
         for (int row = 0; row < grid.length; row++) {
             for (int col = 0; col < grid[row].length; col++) {
                 if (!globalVisited[row][col]) {
@@ -109,9 +108,6 @@ public class GameServer {
                     }
                     Cluster cluster = bfs(row, col, globalVisited, symbol);
                     if (cluster.getClusterSize() >= MIN_CLUSTER_SIZE) {
-                        System.out.println(
-                                "Cluster " + (clusterId++) + " (" + grid[row][col] + "), size: "
-                                        + cluster.getClusterSize());
                         clusters.add(cluster);
                     }
                 }
@@ -127,9 +123,9 @@ public class GameServer {
         Queue<int[]> queue = new LinkedList<>();
         boolean[][] localVisited = new boolean[GRID_ROWS][GRID_COLS];
         queue.add(new int[] { startRow, startCol });
-        if (!grid[startRow][startCol].equals(WR)) {
-            globalVisited[startRow][startCol] = true;
-        }
+
+        globalVisited[startRow][startCol] = true;
+
         localVisited[startRow][startCol] = true;
         int[][] directions = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
 
@@ -164,7 +160,6 @@ public class GameServer {
                 }
             }
         }
-
         return new Cluster(symbol, cluster, blockerList);
     }
 
